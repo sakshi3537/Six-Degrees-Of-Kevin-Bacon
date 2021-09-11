@@ -68,12 +68,12 @@ void fillupgraph(vector<vector<int> > &graph,int n)
                 {
                     flag=true;
                     m_num=movie[line.substr(0,i-1)];
-                    start=start+2;
+                    start=i+1;
                 }
                 else if(line[i]=='|')
                 {
-                    a_num.push_back(actor[line.subtr(start,i-start)]);
-                    start=start+1;
+                    a_num.push_back(actor[line.substr(start,i-start)]);
+                    start=i+1;
                 }
             }
             a_num.push_back(actor[line.substr(start)]);
